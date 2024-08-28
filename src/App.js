@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <h1>Food Recipe App</h1>
-      <div>
+      <div className="recipes">
         {recipes ? recipes.map(recipe => (
           <RecipeCard key={recipe.idMeal} recipe={recipe} />
         )) : "No Recipes Found!"}

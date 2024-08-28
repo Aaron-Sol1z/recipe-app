@@ -10,14 +10,16 @@ const RecipeCard = ({recipe}) => {
             strYoutube //link to Youtube video of how to make meal
         } = recipe;
     return (
-        <div>
-            <span>{strCategory}</span><br></br>
+        <div className="recipe-card">
+            <span className="recipe-card-category">{strCategory}</span><br></br>
             <img src={strMealThumb} alt={strMeal}></img>
-            <div>
+            <div className="recipe-card-body">
                 <span>{strArea}</span>
-                <h3>{strMeal}</h3>
+                <p>{strMeal}</p>
+                <div className="recipe-card-links">
                 <a href={"https://www.themealdb.com/meal/" + idMeal} target="_blank" rel="noopener noreferrer">Ingredients</a><br></br>
                 <a href={strYoutube} target="_blank" rel="noopener noreferrer">See video</a>
+                </div>
             </div>
         </div>
     )
