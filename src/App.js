@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef} from "react";
 import './App.css';
 import RecipeCard from './components/RecipeCard.jsx';
+import SearchBar from './components/SearchBar.jsx';
 //url for themealdb to search for meals by name
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
@@ -32,6 +33,12 @@ function App() {
     searchRecipes();
   }, []);
 
+  //call searchRecipes when search is done
+  const handleSubmit = event => {
+    event.preventDefault(); //prevent from reloading page
+    searchRecipes();
+  }
+
   //If there are recipes, create a new array called recipe
   //and pass in the recipe for each element.
   //Each element in the list has a key prop.
@@ -39,9 +46,10 @@ function App() {
   return (
     <div className="App">
       <h1>Food Recipe App</h1>
+      <SearchBar handleSubmit={handleSubmit} value={query} onChange = {event => setQuery(event.target.value)} loading={loading.current} />
       <div className="recipes">
         {recipes ? recipes.map(recipe => (
-          <RecipeCard key={recipe.idMeal} recipe={recipe} />
+            <RecipeCard key={recipe.idMeal} recipe={recipe} />
         )) : "No Recipes Found!"}
       </div>
     </div>

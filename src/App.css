@@ -17,6 +17,25 @@
 h1{
     text-align: center;
 }
+/*SearchBar*/
+form{
+    display: flex;
+    justify-content: center;
+}
+input{
+    border: 1px solid var(--charcoal);
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+input[type="text"]{
+    width: 400px;
+}
+input[type="submit"]{
+    background-color: var(--cloud);
+    width: 100px;
+    cursor: pointer;
+}
 /*RecipeCard*/
 .recipes{
     display: flex;
