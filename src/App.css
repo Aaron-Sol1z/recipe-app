@@ -59,6 +59,15 @@ input[type="submit"]{
     width: 90%;
     border: 1px solid var(--charcoal);
 }
+.recipe-card-tags{
+    display: inline-block;
+    background-color: var(--arctic);
+    margin: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 2px;
+    border: 1px solid var(--charcoal);
+}
 .recipe-card-flag{
     max-width: 20%;
 }
@@ -73,6 +82,7 @@ input[type="submit"]{
     background-color: var(--arctic);
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid var(--charcoal);
 }
 a{
     text-decoration: underline;

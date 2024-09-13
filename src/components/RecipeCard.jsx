@@ -7,9 +7,11 @@ const RecipeCard = ({recipe}) => {
             strCategory, //designated category of meal
             strArea, //area of origin for meal
             strMealThumb, //link to image of meal
+            strTags,//tags associated with meal
             strYoutube //link to Youtube video of how to make meal
-        } = recipe;
-        
+        } = recipe;    
+    let tags = [];//contains separated tags
+
     function areaFlag(area){
         let flag = area;
         let areaImg = "";
@@ -104,11 +106,21 @@ const RecipeCard = ({recipe}) => {
         }
         return areaImg;
     }
+
+    function splitTags(stringTags){
+        const separatedTags = stringTags.split(',');
+        return separatedTags;
+    }
     
     return (
         <div className="recipe-card">
             <span className="recipe-card-category">{strCategory}</span><br></br>
             <img src={strMealThumb} alt={strMeal}></img>
+            {strTags ? (
+                tags = splitTags(strTags),
+                tags.map(tag => (
+                    <span className="recipe-card-tags">{tag}</span>
+                ))) : console.log("This is empty")}
             <div className="recipe-card-body">
                 <img src={areaFlag(strArea)} alt="nation flag" className="recipe-card-flag"></img><br></br>
                 <span>{strArea}</span>
