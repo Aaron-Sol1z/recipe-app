@@ -49,6 +49,7 @@ input[type="submit"]{
     margin: 10px;
     padding-bottom: 10px;
     text-align: center;
+    border: 1px solid var(--charcoal);
 }
 .recipe-card:hover{
     box-shadow: 5px 5px 5px var(--charcoal);
@@ -56,6 +57,10 @@ input[type="submit"]{
 }
 .recipe-card img{
     width: 90%;
+    border: 1px solid var(--charcoal);
+}
+.recipe-card-flag{
+    max-width: 20%;
 }
 .recipe-card-body{
     padding: 10px;
