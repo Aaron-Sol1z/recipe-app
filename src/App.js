@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef} from "react";
 import './App.css';
+import Header from './components/Header.jsx';
 import RecipeCard from './components/RecipeCard.jsx';
 import SearchBar from './components/SearchBar.jsx';
+import Footer from './components/Footer.jsx';
 //url for themealdb to search for meals by name
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
@@ -45,13 +47,14 @@ function App() {
   //Else, display "No Recipes Found! on the page"
   return (
     <div className="App">
-      <h1>Food Recipe App</h1>
+      <Header />
       <SearchBar handleSubmit={handleSubmit} value={query} onChange = {event => setQuery(event.target.value)} loading={loading.current} />
       <div className="recipes">
         {recipes ? recipes.map(recipe => (
             <RecipeCard key={recipe.idMeal} recipe={recipe} />
         )) : "No Recipes Found!"}
       </div>
+      <Footer />
     </div>
   );
 }

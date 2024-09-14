@@ -12,10 +12,19 @@
 }
 .App{
     background-color: var(--seafoam);
-    padding: 10px;
 }
-h1{
+header{
+    background-color: var(--arctic);
+    border-bottom: 8px solid var(--fossil);
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+header h1{
     text-align: center;
+}
+header p{
+    padding-bottom: 12px;
 }
 /*SearchBar*/
 form{
@@ -42,6 +51,7 @@ input[type="submit"]{
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
+    min-height: 370px;
 }
 .recipe-card{
     width: 200px;
@@ -87,4 +97,30 @@ input[type="submit"]{
 a{
     text-decoration: underline;
     color: var(--charcoal);
+}
+/*Footer*/
+footer{
+    border-top: 8px solid var(--fossil);
+    min-height: 50px;
+    color: var(--cloud);
+    background-color: var(--charcoal);
+    text-align: center;
+    bottom: 0;
+    position: bottom;
+    width: 100%;
+}
+footer .contact{
+    text-align: left;
+    padding-left: 30px;
+}
+footer .contact-header{
+    text-decoration: underline;
+    color: var(--cloud);
+}
+footer p{
+    margin-bottom: 15px;
+}
+footer a{
+    color: var(--cloud);
+    margin-bottom: 0px;
 }

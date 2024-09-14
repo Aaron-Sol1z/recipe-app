@@ -140,7 +140,8 @@ RecipeCard.propTypes = {
     strMeal: PropTypes.string, 
     strCategory: PropTypes.string, 
     strArea: PropTypes.string, 
-    strMealThumb: PropTypes.string, 
+    strMealThumb: PropTypes.string,
+    strTags: PropTypes.string, 
     strYoutube: PropTypes.string, 
 }
 
