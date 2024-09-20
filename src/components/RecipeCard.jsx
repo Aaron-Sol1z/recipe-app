@@ -115,19 +115,19 @@ const RecipeCard = ({recipe}) => {
     return (
         <div className="recipe-card">
             <span className="recipe-card-category">{strCategory}</span><br></br>
-            <img src={strMealThumb} alt={strMeal}></img>
+            <img src={strMealThumb} alt={strMeal} title={strMeal}></img>
             {strTags ? (
                 tags = splitTags(strTags),
                 tags.map(tag => (
                     <span className="recipe-card-tags">{tag}</span>
-                ))) : console.log("This is empty")}
+                ))) : console.log(`No tags in this recipe`)}
             <div className="recipe-card-body">
-                <img src={areaFlag(strArea)} alt="nation flag" className="recipe-card-flag"></img><br></br>
+                <img src={areaFlag(strArea)} alt="nation flag" className="recipe-card-flag" title="nation flag"></img><br></br>
                 <span>{strArea}</span>
                 <p>{strMeal}</p>
                 <div className="recipe-card-links">
-                    <a href={"https://www.themealdb.com/meal/" + idMeal} target="_blank" rel="noopener noreferrer">Ingredients</a><br></br>
-                    <a href={strYoutube} target="_blank" rel="noopener noreferrer">See video</a>
+                    <a href={"https://www.themealdb.com/meal/" + idMeal} title="Read recipe instructions" target="_blank" rel="noopener noreferrer">Ingredients</a><br></br>
+                    <a href={strYoutube} title="See tutorial video" target="_blank" rel="noopener noreferrer">See video</a>
                 </div>
             </div>
         </div>

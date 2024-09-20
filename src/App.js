@@ -15,18 +15,25 @@ function App() {
   const [query, setQuery] = useState("");
   //state of what recipe array contains. Initial state is an empty array
   const [recipes, setRecipes] = useState([]);
+  let errorFlag = "";
 
   //function to fetch data from api and search for recipes
   const searchRecipes = async () => {
     loading.current = true;
     const url = apiUrl + query; //url is apiUrl + search query
     //fetch url
-    await fetch(url).then(function (response) {
-      return response.json(); //get response in json format
-    }).then(function (data) {
-      console.log(data); //display meals array
-      setRecipes(data.meals); //set recipes array with meals array from data
-    });
+    try{
+      await fetch(url).then(function (response) {
+        return response.json(); //get response in json format
+      }).then(function (data) {
+        console.log(data); //display meals array
+        setRecipes(data.meals); //set recipes array with meals array from data
+      });
+    }
+    catch(error){
+      errorFlag = error;
+    }
+    console.log(`Error = ${errorFlag}`);
     loading.current = false; //page is no longer loading
   }
 
@@ -50,9 +57,11 @@ function App() {
       <Header />
       <SearchBar handleSubmit={handleSubmit} value={query} onChange = {event => setQuery(event.target.value)} loading={loading.current} />
       <div className="recipes">
-        {recipes ? recipes.map(recipe => (
+        {errorFlag === '' ?
+          recipes ? recipes.map(recipe => (
             <RecipeCard key={recipe.idMeal} recipe={recipe} />
-        )) : "No Recipes Found!"}
+          )) : "No Recipes Found!" 
+          : <h1>Oops. Something went wrong.</h1>}
       </div>
       <Footer />
     </div>
