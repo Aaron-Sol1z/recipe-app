@@ -54,6 +54,8 @@ input[type="submit"]{
     min-height: 370px;
 }
 .recipe-card{
+    display: flex;
+    flex-direction: column;
     width: 200px;
     background-color: var(--cloud);
     margin: 10px;
@@ -65,9 +67,17 @@ input[type="submit"]{
     box-shadow: 5px 5px 5px var(--charcoal);
     transition: box-shadow 0.5s;
 }
-.recipe-card img{
+.recipe-card-thumbnail{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
+}
+.recipe-card img{
     border: 1px solid var(--charcoal);
+}
+.recipe-card-tag-container{
+    flex-grow: 1;
 }
 .recipe-card-tags{
     display: inline-block;
@@ -93,6 +103,7 @@ input[type="submit"]{
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--charcoal);
+    flex-grow: 1;
 }
 a{
     text-decoration: underline;

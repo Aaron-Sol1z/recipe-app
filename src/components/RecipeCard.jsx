@@ -143,13 +143,15 @@ const RecipeCard = ({recipe}) => {
     
     return (
         <div className="recipe-card">
-            <span className="recipe-card-category">{strCategory}</span><br></br>
-            <img src={strMealThumb} alt={strMeal} title={strMeal}></img>
+            <span className="recipe-card-category">{strCategory}</span>
+            <img className="recipe-card-thumbnail" src={strMealThumb} alt={strMeal} title={strMeal}></img>
+            <div className="recipe-card-tag-container">
             {strTags ? (
                 tags = splitTags(strTags),
                 tags.map(tag => (
                     <span className="recipe-card-tags">{tag}</span>
-                ))) : console.log(`No tags in this recipe`)}
+                ))) : <span className="recipe-card-tags">No tags</span>}
+            </div>
             <div className="recipe-card-body">
                 <img src={areaFlag(strArea)} alt="nation flag" className="recipe-card-flag" title="nation flag"></img><br></br>
                 <span>{strArea}</span>
