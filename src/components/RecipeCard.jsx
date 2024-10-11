@@ -1,5 +1,34 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import american from '../assets/area_american.png';
+import british from '../assets/area_british.png';
+import canadian from '../assets/area_canadian.png';
+import chinese from '../assets/area_chinese.png';
+import croatian from '../assets/area_croatia.png';
+import dutch from '../assets/area_dutch.png';
+import egyptian from '../assets/area_egyptian.png';
+import filipino from '../assets/area_filipino.png';
+import french from '../assets/area_french.png';
+import greek from '../assets/area_greek.png';
+import indian from '../assets/area_indian.png';
+import irish from '../assets/area_irish.png';
+import italian from '../assets/area_italian.png';
+import jamaican from '../assets/area_jamaican.png';
+import japanese from '../assets/area_japanese.png';
+import kenyan from '../assets/area_kenyan.png';
+import malaysian from '../assets/area_malaysian.png';
+import mexican from '../assets/area_mexican.png';
+import moroccan from '../assets/area_moroccan.png';
+import polish from '../assets/area_polish.png';
+import portuguese from '../assets/area_portuguese.png';
+import russian from '../assets/area_russian.png';
+import spanish from '../assets/area_spanish.png';
+import thai from '../assets/area_thai.png';
+import tunisian from '../assets/area_tunisian.png';
+import turkish from '../assets/area_turkish.png';
+import ukrainian from '../assets/area_ukrainian.png';
+import vietnamese from '../assets/area_vietnamese.png';
+import unknown from '../assets/area_unknown.png';
 
 const RecipeCard = ({recipe}) => {
     const { idMeal, //id to retrieve url for instructions
@@ -16,92 +45,92 @@ const RecipeCard = ({recipe}) => {
         let flag = area;
         let areaImg = "";
         switch(flag){
-            case "American":
-                areaImg = "images/area_american.png";
+            case "American":   
+                areaImg = `${american}`;
                 break;
             case "British":
-                areaImg = "images/area_british.png";
+                areaImg = `${british}`;
                 break;
             case "Canadian":
-                areaImg = "images/area_canadian.png";
+                areaImg = `${canadian}`;
                 break;
             case "Chinese":
-                areaImg = "images/area_chinese.png";
+                areaImg = `${chinese}`;
                 break;
             case "Croatian":
-                areaImg = "images/area_croatia.png";
+                areaImg = `${croatian}`;
                 break;
             case "Dutch":
-                areaImg = "images/area_dutch.png";
+                areaImg = `${dutch}`;
                 break;
             case "Egyptian":
-                areaImg = "images/area_egyptian.png";
+                areaImg = `${egyptian}`;
                 break;
             case "Filipino":
-                areaImg = "images/area_filipino.png";
+                areaImg = `${filipino}`;
                 break;
             case "French":
-                areaImg = "images/area_french.png";
+                areaImg = `${french}`;
                 break;
             case "Greek":
-                areaImg = "images/area_greek.png";
+                areaImg = `${greek}`;
                 break;
             case "Indian":
-                areaImg = "images/area_indian.png";
+                areaImg = `${indian}`;
                 break;
             case "Irish":
-                areaImg = "images/area_irish.png";
+                areaImg = `${irish}`;
                 break;
             case "Italian":
-                areaImg = "images/area_italian.png";
+                areaImg = `${italian}`;
                 break;
             case "Jamaican":
-                areaImg = "images/area_jamaican.png";
+                areaImg = `${jamaican}`;
                 break;
             case "Japanese":
-                areaImg = "images/area_japanese.png";
+                areaImg = `${japanese}`;
                 break;
             case "Kenyan":
-                areaImg = "images/area_kenyan.png";
+                areaImg = `${kenyan}`;
                 break;
             case "Malaysian":
-                areaImg = "images/area_malaysian.png";
+                areaImg = `${malaysian}`;
                 break;
             case "Mexican":
-                areaImg = "images/area_mexican.png";
+                areaImg = `${mexican}`;
                 break;
             case "Moroccan":
-                areaImg = "images/area_moroccan.png";
+                areaImg = `${moroccan}`;
                 break;
             case "Polish":
-                areaImg = "images/area_polish.png";
+                areaImg = `${polish}`;
                 break;
             case "Portuguese":
-                areaImg = "images/area_portuguese.png";
+                areaImg = `${portuguese}`;
                 break;
             case "Russian":
-                areaImg = "images/area_russian.png";
+                areaImg = `${russian}`;
                 break;
             case "Spanish":
-                areaImg = "images/area_spanish.png";
+                areaImg = `${spanish}`;
                 break;
             case "Thai":
-                areaImg = "images/area_thai.png";
+                areaImg = `${thai}`;
                 break;
             case "Tunisian":
-                areaImg = "images/area_tunisian.png";
+                areaImg = `${tunisian}`;
                 break;
             case "Turkish":
-                areaImg = "images/area_turkish.png";
+                areaImg = `${turkish}`;
                 break;
             case "Ukrainian":
-                areaImg = "images/area_ukrainian.png";
+                areaImg = `${ukrainian}`;
                 break;
             case "Vietnamese":
-                areaImg = "images/area_vietnamese.png";
+                areaImg = `${vietnamese}`;
                 break;
             default://unknown area
-                areaImg = "images/area_unknown.png";
+                areaImg = `${unknown}`;
                 break;
         }
         return areaImg;
