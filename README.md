@@ -1,3 +1,51 @@
+# Food Recipe Search
+
+## About The Project
+This project lets users search for a word and find a list of dishes associated with the word. These recipes come from around the world and offer a variety of dishes. So whether you're looking for something you're familiar with or find something new that piques your interest, this application will help in your search.
+
+After learning HTML, CSS, and JavaScript, the next step was to learn react. As someone who wants to learn more about cooking, I was inspired to make a project that could quickly refer to instructions and tutorials for dishes. Finding the right API took some time, but when I found TheMealDb and learned enough about react, I was eager to make this project a reality.
+
+I handled creating components and rendering cards fairly well, but I encountered some challenges when making the search bar, particularly making sense of the various react hooks, and the different file structure compared that react has. However, making sense of how hooks work and when they are used for brought clarity to this project. This experience was a fun one, and working on this project has made me comfortable using react in the future.
+
+### Built With
+- HTML5
+- CSS3
+- JavaScript
+- React
+
+## Usage
+This project features one text field for a word. You can search for either a specific dish or a generic word such as 'cake' or 'chicken.' To submit searches, hit the 'Search' button.
+
+![Searchbar](./public/readme-images/food-recipe-app-searchbar.png)
+
+Searching for a dish will return a maximum of twenty-five entries, depending on how many dishes match with your search. Each recipe card will return the following information:
+- Dish category
+- Dish thumbnail
+- Associated tags
+- Region of origin
+- Dish name
+- Link to recipe and list of ingredients provided by TheMealDb
+- Link to a YouTube tutorial
+
+![Recipe Card Example](./public/readme-images/food-recipe-app-card.png)
+
+As mentioned, this application can return several entries depending on what recipies TheMealDb contain. For instance, searching 'cake' will return twenty-five dishes.
+
+![Search Result Example](./public/readme-images/food-recipe-app-search-result.png)
+
+A search will not display a valid result when:
+- The word field is empty
+- TheMealDb does not have data that contain the searched word in any dish
+
+## Credits
+- [Albert Devshot's Food Recipe App](https://www.youtube.com/watch?v=3kFSr-u6Uls&t=647s "YouTube") : For inspiration and help with the searchbar 
+- [TheMealDb](https://www.themealdb.com/ "TheMealDb") : API used to fetch results
+- [GitHub Pages](https://pages.github.com/ "GitHub Pages") : Used to host project online
+- [Font Awesome](https://fontawesome.com/ "Font Awesome") : Used for icons in the footer
+- [PedroTech's How to Deploy A React App To Github Pages](https://www.youtube.com/watch?v=Q9n2mLqXFpU "YouTube") : For help publishing on GitHub
+
+## (The following was generated when setting up this project)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
