@@ -146,20 +146,21 @@ const RecipeCard = ({recipe}) => {
             <span className="recipe-card-category">{strCategory}</span>
             <img className="recipe-card-thumbnail" src={strMealThumb} alt={strMeal} title={strMeal}></img>
             <div className="recipe-card-tag-container">
-            {strTags ? (
-                tags = splitTags(strTags),
-                tags.map(tag => (
-                    <span className="recipe-card-tags">{tag}</span>
-                ))) : <span className="recipe-card-tags">No tags</span>}
+                {strTags ? (
+                    tags = splitTags(strTags),
+                    tags.map(tag => (
+                        <span className="recipe-card-tags">{tag}</span>
+                    ))) : <span className="recipe-card-tags">No tags</span>
+                }
             </div>
-            <div className="recipe-card-body">
-                <img src={areaFlag(strArea)} alt="nation flag" className="recipe-card-flag" title="nation flag"></img><br></br>
+            <div className="recipe-card-area">
+                <img src={areaFlag(strArea)} alt="nation flag" className="recipe-card-flag" title="nation flag"></img>
                 <span>{strArea}</span>
-                <p>{strMeal}</p>
-                <div className="recipe-card-links">
-                    <a href={"https://www.themealdb.com/meal/" + idMeal} title="Read recipe instructions" target="_blank" rel="noopener noreferrer">Ingredients</a><br></br>
-                    <a href={strYoutube} title="See tutorial video" target="_blank" rel="noopener noreferrer">See video</a>
-                </div>
+            </div>
+            <p className="recipe-card-meal-name">{strMeal}</p>
+            <div className="recipe-card-links">
+                <a href={"https://www.themealdb.com/meal/" + idMeal} title="Read recipe instructions" target="_blank" rel="noopener noreferrer">Ingredients</a><br></br>
+                <a href={strYoutube} title="See tutorial video" target="_blank" rel="noopener noreferrer">See video</a>
             </div>
         </div>
     )

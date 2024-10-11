@@ -88,22 +88,33 @@ input[type="submit"]{
     border-radius: 2px;
     border: 1px solid var(--charcoal);
 }
-.recipe-card-flag{
-    max-width: 20%;
-}
 .recipe-card-body{
     padding: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
-.recipe-card-body p{
+.recipe-card-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.recipe-card-flag{
+    max-width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;
+}
+.recipe-card-meal-name{
     font-size: 25px;
 }
 .recipe-card-links{
     background-color: var(--arctic);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid var(--charcoal);
-    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 a{
     text-decoration: underline;
@@ -119,6 +130,7 @@ footer{
     bottom: 0;
     position: bottom;
     width: 100%;
+    overflow: auto;
 }
 footer .contact{
     text-align: left;
@@ -134,4 +146,35 @@ footer p{
 footer a{
     color: var(--cloud);
     margin-bottom: 0px;
+}
+/*responsive css*/
+@media(max-width:520px){
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 14px;
+    }
+    input[type="text"]{
+        float: none;
+        display: block;
+        width: 80%;
+    }
+    input[type=submit]{
+        width: 50%;
+    }
+    .recipe-card:hover{
+        box-shadow: none;
+        transition: none;
+    }
+    .recipe-card-meal-name{
+        font-size: 18px;
+    }
+    footer .contact{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
